@@ -31,6 +31,16 @@ Basis: uitleg, spelen, afgaan en punten
 - [ ] x. maak game-over-scherm
 - [ ] x. maak uitlegscherm
 
+stappenplan:
+1. zorg dat het kan bewegen maar niet dat het blijft bewegen 
+2. teken fruit
+3. detecteer fruit
+4. onthoud punten en zet op scherm
+5. verplaats fruit na eten 
+6. een border dat je afgaat 
+7. met elke seconde gaat snanke sneller
+
+
 ### Uitbreidingen 1
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
 - [ ] *later uitwerken*
