@@ -11,13 +11,15 @@ Gemaakt door:
 ## Mijn planning
 Werk de planning af van boven naar beneden<br>
 Geef aan met [x] welke onderdelen af zijn
-
+eerste stap= snake van 1 segment maken
+en zorgen dat hij kan bewegen vervolgens het fruit tekenen(niet te ingewikkeld)
+je moet het punt maken een variabele die het de score bij houd. dan zorgen dat het fruit verplaatst zorgen dat border raken af is en zorgen dat je steeds sneller gaat elke keer dat je een stukje fruit pakt 
 ### Basisstappen
 Basis: uitleg, spelen, afgaan en punten
 - [x] 1. maak index.html, style.css en script.js met canvas
 - [x] 2. teken speler
         - Zet je code in de functie tekenAlles()
-- [] 3. beweeg speler
+- [ ] 3. beweeg speler
         - Zet je code in de functie beweegAlles()
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
