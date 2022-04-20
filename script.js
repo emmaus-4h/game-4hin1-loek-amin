@@ -14,7 +14,7 @@ const uitleg = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
-const KeyIsDown 
+
 const KEY_RIGHT = 39;
 const KEY_LEFT = 37;
 const KEY_UP = 38;
@@ -40,19 +40,19 @@ var beweegAlles = function () {
 };
 var beweegspeler = function() {
 
-if (keyIsDown (KEY_RIGHT)
+if (keyIsDown (KEY_RIGHT)) {
  spelerX = spelerX + 20
 }
 
-if (keyIsDown (KEY_LEFT){
+if (keyIsDown (KEY_LEFT)){
  spelerX = spelerX - 20
 }
 
-if (keyIsDown (KEY_UP){
+if (keyIsDown (KEY_UP)){
  spelerY = spelerY - 20
 }
 
-if (keyIsDown (KEY_DOWN){
+if (keyIsDown (KEY_DOWN)){
  spelerY = spelerY + 20
 }
 };
@@ -110,6 +110,7 @@ var checkGameOver = function () {
  * de p5 library, zodra het spel geladen is in de browser
  */
 function setup() {
+  console.log("setup");
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
@@ -123,6 +124,7 @@ function setup() {
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
+    //console.log("draw");
   if (spelStatus === SPELEN) {
     beweegAlles();
     verwerkBotsing();
@@ -136,3 +138,5 @@ function draw() {
 
   }
 }
+
+  console.log("einde");
