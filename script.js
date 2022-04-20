@@ -10,15 +10,15 @@
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
 
-const uitleg = 0
+const uitleg = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 const KeyIsDown 
-const KEY_RIGHT = 39
-const KEY_LEFT = 37
-const KEY_UP = 38
-const KEY_DOWN = 40
+const KEY_RIGHT = 39;
+const KEY_LEFT = 37;
+const KEY_UP = 38;
+const KEY_DOWN = 40;
 
 
 var spelerX = 600; // x-positie van speler
