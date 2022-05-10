@@ -1,3 +1,7 @@
+/// @ts-check
+/// <reference path=".gitpod/p5.global-mode.d.ts" />
+"use strict";
+
 /* Game opdracht
    Informatica - Emmauscollege Rotterdam
    Template voor een game in JavaScript met de p5 library
@@ -6,103 +10,157 @@
    voeg er je eigen code aan toe.
  */
 
+
+
+
 /* ********************************************* */
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
 
-const uitleg = 0;
+const UITLEG = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
-
+var KeyIsDown
 const KEY_RIGHT = 39;
 const KEY_LEFT = 37;
 const KEY_UP = 38;
 const KEY_DOWN = 40;
+var spelerX = 450; // x-positie van speler
+var spelerY = 670; // y-positie van speler
+
+var kogelX = 0;    // x-positie van kogel
+var kogelY = 0;    // y-positie van kogel
+
+var vijandX = 60   // x-positie van vijand
+var vijandY = 670;   // y-positie van vijand
+
+var score = 0; // aantal behaalde punten
 
 
-var spelerX = 600; // x-positie van speler
-var spelerY = 600; // y-positie van speler
+
+
 
 /* ********************************************* */
-/* functies die je gebruikt in je game           */
+/*      functies die je gebruikt in je game      */
 /* ********************************************* */
+
 
 /**
- * Updatet globale variabelen met posities van speler, vijanden en kogels
+ * Tekent het speelveld
  */
-var beweegAlles = function () {
-  // speler
-
-  // vijand
-
-  // kogel
+var tekenVeld = function () {
+  fill("black");
+  rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
-var beweegspeler = function() {
+
+
+/**
+ * Tekent de vijand
+ * @param {number} x x-coördinaat
+ * @param {number} y y-coördinaat
+ */
+var tekenVijand = function(x, y) {fill("blue"); 
+  ellipse(x, y, 80, 70);
+    
+
+};
+
+
+/**
+ * Tekent de kogel of de bal
+ * @param {number} x x-coördinaat
+ * @param {number} y y-coördinaat
+ */
+var tekenKogel = function(x, y) {
+
+
+};
+
+
+/**
+ * Tekent de speler
+ * @param {number} x x-coördinaat
+ * @param {number} y y-coördinaat
+ */
+var tekenSpeler = function(x, y) {
+  fill("yellow"); 
+  ellipse(x, y, 65, 65);
+};
+
+
+/**
+ * Updatet globale variabelen met positie van vijand of tegenspeler
+ */
+var beweegVijand = function() {
+
+};
+    
+
+
+
+/**
+ * Updatet globale variabelen met positie van kogel of bal
+ */
+var beweegKogel = function() {
+
+};
+
+
+/**
+ * Kijkt wat de toetsen/muis etc zijn.
+ * Updatet globale variabele spelerX en spelerY
+ */
+var beweegSpeler = function() {
 
 if (keyIsDown (KEY_RIGHT)) {
- spelerX = spelerX + 20
+ spelerX = spelerX + 20;
 }
 
-if (keyIsDown (KEY_LEFT)){
- spelerX = spelerX - 20
+if (keyIsDown (KEY_LEFT)) {
+ spelerX = spelerX - 20;
 }
 
-if (keyIsDown (KEY_UP)){
- spelerY = spelerY - 20
+if (keyIsDown (KEY_UP)) {
+ spelerY = spelerY - 20;
 }
 
-if (keyIsDown (KEY_DOWN)){
- spelerY = spelerY + 20
+if (keyIsDown (KEY_DOWN)) {
+ spelerY = spelerY + 20;
 }
-};
-
-/**
- * Checkt botsingen
- * Verwijdert neergeschoten dingen
- * Updatet globale variabelen punten en health
- */
-var verwerkBotsing = function () {
-  // botsing speler tegen vijand
-
-  // botsing kogel tegen vijand
-
-  // update punten en health
 
 };
 
 /**
- * Tekent spelscherm
+ * Zoekt uit of de vijand is geraakt
+ * @returns {boolean} true als vijand is geraakt
  */
-var tekenAlles = function () {
-  // achtergrond
+var checkVijandGeraakt = function() {
 
-  // vijand
-
-  // kogel
-
-  // speler
-  fill("white");
-  rect(spelerX - 25, spelerY - 25, 50, 50);
-  fill("black");
-  ellipse(spelerX, spelerY, 10, 10);
-
-  // punten en health
-
-};
-
-/**
- * return true als het gameover is
- * anders return false
- */
-var checkGameOver = function () {
-  // check of HP 0 is , of tijd op is, of ...
   return false;
 };
 
-/* ********************************************* */
-/* setup() en draw() functies / hoofdprogramma   */
-/* ********************************************* */
+
+/**
+ * Zoekt uit of de speler is geraakt
+ * bijvoorbeeld door botsing met vijand
+ * @returns {boolean} true als speler is geraakt
+ */
+var checkSpelerGeraakt = function() {
+    
+  return false;
+};
+
+
+/**
+ * Zoekt uit of het spel is afgelopen
+ * @returns {boolean} true als het spel is afgelopen
+ */
+var checkGameOver = function() {
+    
+  return false;
+};
+
 
 /**
  * setup
@@ -110,35 +168,37 @@ var checkGameOver = function () {
  * de p5 library, zodra het spel geladen is in de browser
  */
 function setup() {
-  console.log("setup");
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  background('grey');
 }
+
 
 /**
  * draw
- * de code in deze functie wordt 50 keer per seconde
+ * de code in deze functie wordt meerdere keren per seconde
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
-    //console.log("draw");
-  if (spelStatus === SPELEN) {
-    beweegAlles();
-    verwerkBotsing();
-    tekenAlles();
-    if (checkGameOver()) {
-      spelStatus = GAMEOVER;
-    }
-  }
-  if (spelStatus === GAMEOVER) {
-    // teken game-over scherm
+  switch (spelStatus) {
+    case SPELEN:
+      beweegVijand();
+      beweegKogel();
+      beweegSpeler();
+      
+      if (checkVijandGeraakt()) {
+        // punten erbij
+        // nieuwe vijand maken
+      }
+      
+      if (checkSpelerGeraakt()) {
+        // leven eraf of gezondheid verlagen
+        // eventueel: nieuwe speler maken
+      }
 
-  }
-}
-tekenVeld();
+      tekenVeld();
       tekenVijand(vijandX, vijandY)
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
@@ -146,6 +206,6 @@ tekenVeld();
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
       }
-
-
-  console.log("einde");
+      break;
+  }
+}
