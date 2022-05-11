@@ -128,7 +128,9 @@ if (keyIsDown (KEY_UP)) {
 if (keyIsDown (KEY_DOWN)) {
  spelerY = spelerY + 20;
 }
-
+if (spelerX >= 1280) {
+  spelerX = 1280;
+}
 };
 
 /**
