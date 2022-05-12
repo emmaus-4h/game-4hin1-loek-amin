@@ -128,15 +128,18 @@ if (keyIsDown (KEY_UP)) {
 if (keyIsDown (KEY_DOWN)) {
  spelerY = spelerY + 20;
 }
-if (spelerX >= 1230) {
-  spelerX = 1230;
+if (spelerX >= 1227) {
+  spelerX = 1227;
 }
-  if (spelerX <= 30) {
-  spelerX = 30;
+  if (spelerX <= 52) {
+  spelerX = 52;
 }
   if (spelerY >= 666) {
   spelerY = 666;
 }
+  if (spelerY <= 59) {
+  spelerY = 59;
+  }
 };
 
 /**
