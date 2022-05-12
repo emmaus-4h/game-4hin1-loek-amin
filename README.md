@@ -1,3 +1,4 @@
+
 Deze game is gebaseerd op het template voor 4HV van het Emmauscollege Rotterdam
 
 ## Mijn spel: *scuffed snake*
@@ -19,18 +20,17 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] 1. maak index.html, style.css en script.js met canvas
 - [x] 2. teken speler
         - Zet je code in de functie tekenAlles()
-- [ ] 3. beweeg speler
+- [x] 3. beweeg speler
         - Zet je code in de functie beweegAlles()
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
-- [ ] 4. *(pas de volgende stappen in de planning zelf aan)*
-- [ ] x. teken je tegenspeler (vijanden of dingen die je moet pakken of doelen of ...)
-- [ ] x. teken een bal, kogel (als die in je spel zit)
-- [ ] x. beweeg de tegenspeler of je bal
-- [ ] x. zet punten op het scherm 
-- [ ] x. zorg dat je punten kunt scoren
-- [ ] x. zorg dat je af kunt
-- [ ] x. maak game-over-scherm
+- [x] 4. teken je tegenspeler (vijanden of dingen die je moet pakken of doelen of ...)
+- [ ] 5. zet console.log bericht neer als speler vijand raakt
+- [ ] 6. verplaats vijand als diue geraakt is
+- [ ] 7. zet punten op het scherm 
+- [ ] 8. zorg dat je punt krijgt als je op bvijand staat
+- [ ] 9. zet tijd op scherm, begin bij 60 seconde en tel af
+- [ ] 10. ga gameover als tijd ==== 0
 - [ ] x. maak uitlegscherm
 
 stappenplan:

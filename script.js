@@ -84,7 +84,7 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-  fill("yellow"); 
+  fill("red"); 
   ellipse(x, y, 65, 65);
 };
 
@@ -183,7 +183,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('grey');
+  background('gold');
 }
 
 
