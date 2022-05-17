@@ -137,8 +137,8 @@ if (spelerX >= 1227) {
   if (spelerY >= 666) {
   spelerY = 666;
 }
-  if (spelerY <= 59) {
-  spelerY = 59;
+  if (spelerY <= 53) {
+  spelerY = 53;
   }
 };
 
