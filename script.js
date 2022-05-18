@@ -52,6 +52,12 @@ var score = 0; // aantal behaalde punten
 var tekenVeld = function () {
   fill("black");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
+
+  // score
+  fill("white");
+  textSize(50);
+  text("score " + score, 100,100);
+  score = score + 1;
 };
 
 
