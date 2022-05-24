@@ -67,7 +67,7 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {fill("blue"); 
-  ellipse(x, y, 80, 70);
+  ellipse(vijandX, vijandY, 80, 70);
     
 
 };
@@ -91,7 +91,7 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("red"); 
-  ellipse(x, y, 65, 65);
+ ellipse(x, y, 65, 65);
 };
 
 
@@ -120,19 +120,19 @@ var beweegKogel = function() {
 var beweegSpeler = function() {
 
 if (keyIsDown (KEY_RIGHT)) {
- spelerX = spelerX + 20;
+ spelerX = spelerX + 10;
 }
 
 if (keyIsDown (KEY_LEFT)) {
- spelerX = spelerX - 20;
+ spelerX = spelerX - 10;
 }
 
 if (keyIsDown (KEY_UP)) {
- spelerY = spelerY - 20;
+ spelerY = spelerY - 10;
 }
 
 if (keyIsDown (KEY_DOWN)) {
- spelerY = spelerY + 20;
+ spelerY = spelerY + 10;
 }
 if (spelerX >= 1227) {
   spelerX = 1227;
@@ -153,6 +153,13 @@ if (spelerX >= 1227) {
  * @returns {boolean} true als vijand is geraakt
  */
 var checkVijandGeraakt = function() {
+  console.log("spelerX "+spelerX+" vijandX "+vijandX);
+  if (spelerX - vijandX <50 &&
+      spelerX - vijandX >-50 &&
+      spelerY - vijandY <50){
+     console.log("botsing");
+      }
+    
 
   return false;
 };
@@ -164,7 +171,8 @@ var checkVijandGeraakt = function() {
  * @returns {boolean} true als speler is geraakt
  */
 var checkSpelerGeraakt = function() {
-    
+
+  
   return false;
 };
 
