@@ -91,7 +91,7 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("red"); 
- ellipse(x, y, 65, 65);
+ ellipse(spelerX, spelerY, 65, 65);
 };
 
 
@@ -154,9 +154,11 @@ if (spelerX >= 1227) {
  */
 var checkVijandGeraakt = function() {
   console.log("spelerX "+spelerX+" vijandX "+vijandX);
-  if (spelerX - vijandX <50 &&
+  console.log("spelerY "+spelerY+" vijandY "+vijandY);
+ if (spelerX - vijandX <50 &&
       spelerX - vijandX >-50 &&
-      spelerY - vijandY <50){
+      spelerY - vijandY <50 &&
+    spelerY - vijandY >-50){
      console.log("botsing");
       }
     
