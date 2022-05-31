@@ -36,7 +36,7 @@ var vijandX = 60   // x-positie van vijand
 var vijandY = 670;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
-
+var tijd = 10*50; // 10 seconde
 
 
 
@@ -57,7 +57,7 @@ var tekenVeld = function () {
   fill("white");
   textSize(50);
   text("score " + score, 100,100);
-  score = score + 1;
+  tijd = tijd - 1;
 };
 
 
@@ -160,6 +160,7 @@ var checkVijandGeraakt = function() {
       spelerY - vijandY <50 &&
     spelerY - vijandY >-50){
      console.log("botsing");
+     score = score + 1;
       }
     
 
