@@ -67,8 +67,8 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {fill("blue"); 
-  ellipse(vijandX, vijandY, 80, 70);
-    
+  ellipse(vijandX, vijandY,70, 80);
+    // het moet random verplaatsen //
 
 };
 
