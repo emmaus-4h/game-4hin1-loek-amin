@@ -25,10 +25,10 @@ Basis: uitleg, spelen, afgaan en punten
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [x] 4. teken je tegenspeler (vijanden of dingen die je moet pakken of doelen of ...)
-- [ ] 5. zet console.log bericht neer als speler vijand raakt
+- [x] 5. zet console.log bericht neer als speler vijand raakt
 - [ ] 6. verplaats vijand als diue geraakt is
-- [ ] 7. zet punten op het scherm 
-- [ ] 8. zorg dat je punt krijgt als je op bvijand staat
+- [x] 7. zet punten op het scherm 
+- [x] 8. zorg dat je punt krijgt als je op bvijand staat
 - [ ] 9. zet tijd op scherm, begin bij 60 seconde en tel af
 - [ ] 10. ga gameover als tijd ==== 0
 - [ ] x. maak uitlegscherm
